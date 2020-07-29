@@ -1,0 +1,62 @@
+# XCI Configuraton File Grammar
+
+scopeName: 'source.xci.config'
+name: 'XCI Configuration'      # Name shown in Atom Editor grammar selection
+# File extensions associated with this grammar
+fileTypes: [
+  'xci'
+]
+
+patterns: [
+  { include: '#keywords' }
+  { include: '#comments' }
+
+]
+
+# Respository starts here -----------------------------------------------------
+repository:
+
+  'keywords':
+    patterns: [
+      {
+        match:  '\\b(?i:title|author|palette|menu_xci|title_screen|init_cursor|zone)\\b'
+        name:   'keyword.xci.main'
+      },
+      {
+        match:  '\\b(?i:tiles_hex|sprites_hex)\\b'
+        name:   'keyword.xci.asset'
+      },
+      {
+        match:  '\\b(?i:menu_bg|menu_fg|menu_lc|menu_sp|menu_rc|menu_div|menu_check|menu_uncheck|menu|menu_item|controls|about|text1_bg|text1_fg|text2_bg|text2_fg|text3_bg|text3_fg|tb_dim|tool|tool_tiles|inventory|walk|run|look|use|talk|strike)\\b'
+        name:   'keyword.xci.menu'
+      },
+      {
+        match:  '\\b(?i:duration)\\b'
+        name:   'keyword.xci.title'
+      },
+      {
+        match:  '\\b(?i:bitmap|music|sprite_frames|sprite|tiles|wait|sprite_move|sprite_hide)\\b'
+        name:   'keyword.xci.animation'
+      },
+      {
+        match:  '\\b(?i:end_anim|init|first|text|scroll|line|clear|go_level|tool_trigger|item_trigger|if|if_not|end_if|set_state|clear_state|get_item|sound|play)\\b'
+        name:   'keyword.xci.level'
+      },
+      {
+        match:  '\\b(?i:inv_dim|inv_item_dim|inv_empty|inv_left_margin|inv_right_margin|inv_quant|inv_quant_margin|inv_scroll|inv_scroll_margin|inv_item)\\b'
+        name:   'keyword.xci.inventory'
+      },
+      {
+        match:  '\\b(?i:level)\\b'
+        name:   'keyword.xci.zone'
+      }
+    ]
+
+  'comments':
+    patterns: [
+      # semicolon comments
+      {
+        match:  '#.*$'
+        name:   'comment.xci.config'
+      }
+    ]

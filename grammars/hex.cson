@@ -1,0 +1,25 @@
+# XCI Hex File Grammar
+
+scopeName: 'source.xci.hex'
+name: 'XCI Hex'      # Name shown in Atom Editor grammar selection
+# File extensions associated with this grammar
+fileTypes: [
+  'hex'
+]
+
+patterns: [
+    { include: '#comments' }
+
+]
+
+# Respository starts here -----------------------------------------------------
+repository:
+
+  'comments':
+    patterns: [
+      # hash comments
+      {
+        match:  '#.*$'
+        name:   'comment.xci.hex'
+      }
+    ]

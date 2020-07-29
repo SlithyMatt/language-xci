@@ -1,0 +1,25 @@
+# XCI Help File Grammar
+
+scopeName: 'source.xci.help'
+name: 'XCI Help'      # Name shown in Atom Editor grammar selection
+# File extensions associated with this grammar
+fileTypes: [
+  'txt'
+]
+
+patterns: [
+   { include: '#comments' }
+
+]
+
+# Respository starts here -----------------------------------------------------
+repository:
+
+  'comments':
+    patterns: [
+      # hash comments
+      {
+        match:  '#.*$'
+        name:   'comment.xci.help'
+      }
+    ]
