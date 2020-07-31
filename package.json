@@ -2,7 +2,7 @@
   "name": "language-xci",
   "main": "./lib/language-xci",
   "version": "0.1.0",
-  "description": "A short description of your package",
+  "description": "Syntax highlighting for XCI game engine development",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "language-xci:toggle"
