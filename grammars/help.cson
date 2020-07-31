@@ -9,7 +9,7 @@ fileTypes: [
 
 patterns: [
    { include: '#comments' }
-
+   { include: '#constants' }
 ]
 
 # Respository starts here -----------------------------------------------------
@@ -23,3 +23,11 @@ repository:
         name:   'comment.xci.help'
       }
     ]
+
+   'constants':
+      patterns: [
+         {
+            match:   '(\\\\).[0-9]*[h|H|v|V]*'
+            name:    'constant.xci.help.index'
+         }
+      ]
