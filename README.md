@@ -1,5 +1,8 @@
 # language-xci package
 
-Atom plugin to support syntax highlighting for the XCI configuration language.
+[Atom](https://atom.io/) plugin to support syntax highlighting for the
+[XCI game engine](https://github.com/SlithyMatt/x16-xci)
+software development kit, including support for the configuration language,
+hex data files, and help files.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![XCI Logo](xci_logo.png)
